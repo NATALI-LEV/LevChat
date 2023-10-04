@@ -12,4 +12,4 @@ def home():
     return render_template("home.html")
 
 if __name__ == "__main__":
-    Sockeio.run(app,debug = True)
+    Sockeio.run(app, debug = True)
