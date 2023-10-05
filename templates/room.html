@@ -16,6 +16,7 @@
   </div>
 </div>
 <script type="text/javascript">
+    // JavaScript code for handling chat messages with Socket.io
   var socketio = io();
 
   const messages = document.getElementById("messages");
@@ -47,6 +48,7 @@
 </script>
 {% for msg in messages %}
 <script type="text/javascript">
+    // JavaScript code for displaying existing messages
   createMessage("{{msg.name}}", "{{msg.message}}");
 </script>
 {% endfor %} {% endblock %}
