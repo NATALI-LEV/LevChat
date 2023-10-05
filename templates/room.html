@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% block content %}
+<!-- room.html -->
+
+{% extends 'base.html' %} 
+{% block content %}
 <div class="message-box">
   <h2>Chat Room: {{code}}</h2>
   <div class="messages" id="messages"></div>
@@ -16,10 +19,11 @@
   </div>
 </div>
 <script type="text/javascript">
-    // JavaScript code for handling chat messages with Socket.io
+  // JavaScript code for handling chat messages with Socket.io
   var socketio = io();
 
   const messages = document.getElementById("messages");
+  const messageInput = document.getElementById("message");
 
   const createMessage = (name, msg) => {
     const content = `
@@ -40,15 +44,25 @@
   });
 
   const sendMessage = () => {
-    const message = document.getElementById("message");
-    if (message.value == "") return;
-    socketio.emit("message", { data: message.value });
-    message.value = "";
+    const message = messageInput.value;
+    if (message === "") return;
+    socketio.emit("message", { data: message });
+    messageInput.value = "";
   };
+
+  // Listen for the "Enter" key press event
+  messageInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      // Prevent the default Enter key behavior (line break)
+      event.preventDefault();
+      sendMessage();// Call the sendMessage function when Enter is pressed
+    }
+  });
 </script>
 {% for msg in messages %}
 <script type="text/javascript">
-    // JavaScript code for displaying existing messages
+  // JavaScript code for displaying existing messages
   createMessage("{{msg.name}}", "{{msg.message}}");
 </script>
-{% endfor %} {% endblock %}
+{% endfor %} 
+{% endblock %}
