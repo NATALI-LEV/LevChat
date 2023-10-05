@@ -2,10 +2,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ddd8d8c2;
   margin: 0;
   padding: 0;
-  
 }
 
 .content {
@@ -19,7 +18,7 @@ body {
 
 .message-box {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
@@ -30,12 +29,14 @@ body {
   flex-direction: column;
   width: 80vw;
   align-items: stretch;
+  
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 30px;
   text-align: center;
+  color: #1E2761;
+  margin-bottom: 20px;
 
 }
 
@@ -63,7 +64,7 @@ h2 {
 
 .text strong {
   font-weight: bold;
-  color: #007bff;
+  color: #7A2048	;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -82,15 +83,30 @@ h2 {
 }
 
 input[type="text"] {
-  width: 80%;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3E3E3E;
+  border-radius: 3px;
+  margin-bottom: 10px; 
+ }
+
+ .name-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  margin-right: 10px;
+}
+
+ .room-code-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px; 
 }
 
 button[type="button"] {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #408EC6	;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -98,8 +114,22 @@ button[type="button"] {
 }
 
 button[type="button"]:hover {
-  background-color: #0056b3;
+  background-color: #408EC6	;
 }
+button[type="submit"] {
+  padding: 5px 5px;
+  background-color: #a881af;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #80669d;
+}
+
 
 .buttons {
   display: flex;
@@ -126,16 +156,17 @@ label {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  justify-content: center; 
+  align-items: center;
 }
 
 .create-btn {
-  width: 100%;
-  background-color: #28a745;
+  width: 20%;
+  background-color: #a881af;
 }
 
 .create-btn:hover {
-  background-color: #1e7e34;
+  background-color: #80669d;
 }
 
 .error {

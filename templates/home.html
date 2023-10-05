@@ -3,19 +3,11 @@
     <form method="post" class="buttons">
       <h2>Welcome to LevChat Rooms!</h2>
       <h3>Enter The Chat Room:</h3>
-      <div>
-        <label>Name:</label>
-        <input
-          type="text"
-          placeholder="Pick a name!"
-          name="name"
-          value="{{name}}"
-        />
-      </div>
       <div class="join">
-        <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
-        <button type="submit" name="join">Join a Room</button>
-      </div>
+        <input type="text" placeholder="Pick a name!" name="name" id="name" value="{{name}}" class="name-input" />
+        <input type="text" placeholder="Room Code" name="code" value="{{code}}" class="room-code-input" />
+      </div> 
+      <button type="submit" name="join">Join a Room</button>
       <button type="submit" name="create" class="create-btn">Create a Room</button>
       <!-- In your home.html file -->
     {% if error %}
