@@ -1,7 +1,8 @@
     <!-- This parts overrides the blocks from the base -->
     {% extends 'base.html' %} {% block content %}
     <form method="post" class="buttons">
-      <h3>Enter The Chat Room</h3>
+      <h2>Welcome to LevChat Rooms!</h2>
+      <h3>Enter The Chat Room:</h3>
       <div>
         <label>Name:</label>
         <input
@@ -16,10 +17,13 @@
         <button type="submit" name="join">Join a Room</button>
       </div>
       <button type="submit" name="create" class="create-btn">Create a Room</button>
-      {% if error %}
+      <!-- In your home.html file -->
+    {% if error %}
+    <div class="error">
       <ul>
-        <li>{{error}}</li>
+        <li>{{ error }}</li>
       </ul>
-      {% endif %}
+    </div>
+    {% endif %}
     </form>
     {% endblock %}

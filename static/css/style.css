@@ -118,6 +118,8 @@ button[type="button"]:hover {
 
 label {
   font-weight: bold;
+  width: 100px; 
+  margin-right: 10px; 
 }
 
 .join {
@@ -134,4 +136,11 @@ label {
 
 .create-btn:hover {
   background-color: #1e7e34;
+}
+
+.error {
+  color: #a40909b0;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
 }
