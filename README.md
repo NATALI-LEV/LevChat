@@ -65,21 +65,21 @@ Flask is a Python web framework that allows you to build web applications easily
 
 1. `Flask` is imported at the beginning of the script, and an instance of it is created: `app = Flask(__name__)`.
 
-2. Routes are defined using decorators like `@app.route("/")`. These routes determine how different URLs in your application should be handled. For example, `@app.route("/")` specifies what should happen when a user accesses the root URL of your website.
+2. Routes are defined using decorators like `@app.route("/")`. These routes determine how different URLs in the application should be handled. For example, `@app.route("/")` specifies what should happen when a user accesses the root URL of my website.
 
-3. You use `render_template` to generate HTML pages. Flask provides a way to render HTML templates with dynamic content.
+3. I use `render_template` to generate HTML pages. Flask provides a way to render HTML templates with dynamic content.
 
-4. The `app.run()` method at the end starts the Flask application, making it listen for incoming HTTP requests and serving your web pages.
+4. The `app.run()` method at the end starts the Flask application, making it listen for incoming HTTP requests and serving my web pages.
 
 **Socket.IO:**
 
-Socket.IO is a library for real-time, bidirectional communication between the server and the client (web browser). It is typically used for building applications that require live updates or chat features. In your code:
+Socket.IO is a library for real-time, bidirectional communication between the server and the client (web browser). It is typically used for building applications that require live updates or chat features. In my code:
 
-1. `SocketIO` is imported from `flask_socketio`, and an instance of it is created: `socketio = SocketIO(app)`. This instance integrates Socket.IO with your Flask application.
+1. `SocketIO` is imported from `flask_socketio`, and an instance of it is created: `socketio = SocketIO(app)`. This instance integrates Socket.IO with my Flask application.
 
 2. Socket.IO enables real-time communication through WebSocket connections, which allow the server to push data to the client and vice versa without the need for the client to continuously poll the server for updates.
 
-3. Socket.IO events are used to define custom messages that can be sent and received between the server and clients. In your code, you have defined several socket.io events, such as `"message"`, `"connect"`, and `"disconnect"`.
+3. Socket.IO events are used to define custom messages that can be sent and received between the server and clients. In my code, I have defined several socket.io events, such as `"message"`, `"connect"`, and `"disconnect"`.
 
 **How Flask and Socket.IO Work Together in my Code:**
 
