@@ -81,7 +81,7 @@ Socket.IO is a library for real-time, bidirectional communication between the se
 
 3. Socket.IO events are used to define custom messages that can be sent and received between the server and clients. In my code, I have defined several socket.io events, such as `"message"`, `"connect"`, and `"disconnect"`.
 
-**How Flask and Socket.IO Work Together in my Code:**
+**How Flask and Socket.IO Work Together in my Code:**   
 
 In my code, Flask handles the HTTP requests and serves the web pages when a user accesses different routes (e.g., the home page or the chat room page). Socket.IO is used for real-time messaging within the chat room. Here's how they work together:
 
