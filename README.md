@@ -1,4 +1,4 @@
-# LevChat - Real-time Chat Room  
+# LevChat - Real-time Chat Room     
    
 LevChat is a real-time chat room web application built using Python, Flask and Socket.IO. It allows users to create and join chat rooms where they can exchange messages in real-time.
   
